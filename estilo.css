@@ -1,23 +1,76 @@
-*{
+* 
+{
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: #333;
+
+body 
+{
+    background-color: #111;
     text-align: center;
 }
 
-#jogo{
+h1 
+{
+    color: #fff;
+}
+
+#jogo 
+{
     width: 640px;
     height: 448px;
     border: 2px solid;
-    background-color: #f00;
+    background-color: #0b0;
     margin: 20px auto;
     position: relative;
 }
-#personagem{
+
+#personagem 
+{
     width: 32px;
     height: 37px;
     background-image: url(imagens/personagem.png);
+    position: absolute;
+    background-position: 0px 0px;
+}
+
+#personagem.esquerda 
+{
+    background-position: 0 36px;
+}
+
+#personagem.cima
+{
+    background-position:  0 73px;
+}
+
+#personagem.direita
+{
+    background-position: 0 108px;
+}
+
+#personagem.andando
+{
+    animation: andando 500ms steps(3) infinite;
+}
+
+@keyframes andando
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -140px;
+    }
+}
+
+#moeda
+{
+    width: 20px;
+    height: 20px;
+    background-image: url('imagens/moeda.png');
+    background-size: 100%;
     position: absolute;
 }
