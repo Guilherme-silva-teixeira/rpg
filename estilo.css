@@ -13,6 +13,7 @@ body
 h1 
 {
     color: #fff;
+    font-family: 'calibri',sans-serif;
 }
 
 #jogo 
@@ -28,10 +29,11 @@ h1
 #personagem 
 {
     width: 32px;
-    height: 37px;
+    height: 36px;
     background-image: url(imagens/personagem.png);
     position: absolute;
     background-position: 0px 0px;
+    border: 1px solid red;
 }
 
 #personagem.esquerda 
@@ -73,4 +75,5 @@ h1
     background-image: url('imagens/moeda.png');
     background-size: 100%;
     position: absolute;
+    border: 1px solid blue;
 }
