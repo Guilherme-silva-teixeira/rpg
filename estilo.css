@@ -14,6 +14,7 @@ h1
 {
     color: #fff;
     font-family: 'calibri',sans-serif;
+    margin-bottom: 30px;
 }
 
 #jogo 
@@ -22,8 +23,9 @@ h1
     height: 448px;
     border: 2px solid;
     background-color: #0b0;
-    margin: 20px auto;
+    margin: 0px auto;
     position: relative;
+    border: 3px solid rgb(121, 61, 5);
 }
 
 #personagem 
@@ -76,4 +78,18 @@ h1
     background-size: 100%;
     position: absolute;
     border: 1px solid blue;
+}
+
+#placar
+{
+    width: 640px;
+    height: 70px;
+    margin-top: 10px;
+    background-color: rgb(11, 75, 30);
+    margin: 0 auto;
+    border: 3px solid rgb(121, 61, 5);
+    color: #fff;
+    font-size: 30px;
+    font-family: 'calibri',sans-serif;
+    padding-bottom: 3px;
 }
