@@ -2,12 +2,31 @@ let personagem = document.querySelector("#personagem");
 
 let moeda = document.querySelector("#moeda");
 
+let qtdmoedas = document.querySelector("#qtdmoedas");
+
+let tempo = document.querySelector("tempo");
+
 moeda.style.display = "none";
 
 let topo = 0;
 let esquerdo = 0;
 
-function criamoeda(){
+
+function atualizaTempo()
+{
+    valor = parseInt(tempo.innerHTML);
+    valor = valor - 1;
+    if (valor <=0) 
+    {
+        valor = 0;    
+    }
+    tempo.innerHTML = valor;
+}
+
+setInterval(atualizaTempo,1000);
+
+function criamoeda()
+{
     
 let moedaX = parseInt(Math.random() * 620);
 let moedaY = parseInt(Math.random() * 428);
@@ -68,7 +87,15 @@ function colisao(elem1,elem2){
         elem1P3 < elem2P3 &&
         elem1P4 > elem2P3
     ){
-        console.log("COLIDIU!!!");
+        moeda.style.display = 'none';
+        criamoeda();
+
+        /*recuperar o valor*/
+        let valor = parseInt(qtdmoedas.innerHTML);
+        //modifiquei o valor
+        valor = valor + 1;
+        //mostrar o valor modificado
+        qtdmoedas.innerHTML = valor;
     }
 
 
@@ -76,7 +103,8 @@ function colisao(elem1,elem2){
 
 
 
-function teclapressionada(evento) {
+function teclapressionada(evento) 
+{
     let tecla = evento.keyCode; /*Recupera o código da tecla que foi pressionada */
     /*codigo da tecla*/
     personagem.classList = "";
