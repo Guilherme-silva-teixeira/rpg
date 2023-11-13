@@ -1,95 +1,93 @@
-* 
-{
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:#e4e4e4;  
+    text-align: center;  
 }
 
-body 
-{
-    background-color: #111;
-    text-align: center;
+#jogo{
+    width:640px;
+    height:448px;
+    background-color: chartreuse;
+    filter: saturate(109%);
+    background-image: url(imagens/backgrond.gif);
+    margin:20px auto;
+    position:relative;
+    border: 3px solid;
 }
 
-h1 
-{
-    color: #fff;
-    font-family: 'calibri',sans-serif;
-    margin-bottom: 30px;
+#personagem{
+    width:32px;
+    height:36px;
+    background-image:url('imagens/personagem.png'); 
+    position:absolute;
+    background-position: 0 0;
 }
 
-#jogo 
-{
-    width: 640px;
-    height: 448px;
-    border: 2px solid;
-    background-color: #0b0;
-    margin: 0px auto;
-    position: relative;
-    border: 3px solid rgb(121, 61, 5);
-}
-
-#personagem 
-{
-    width: 32px;
-    height: 36px;
-    background-image: url(imagens/personagem.png);
-    position: absolute;
-    background-position: 0px 0px;
-    border: 1px solid red;
-}
-
-#personagem.esquerda 
-{
+#personagem.esquerda{
     background-position: 0 36px;
 }
-
-#personagem.cima
-{
-    background-position:  0 73px;
+#personagem.cima{
+    background-position:0 72px;
+}
+#personagem.direita{
+    background-position:0 108px;
 }
 
-#personagem.direita
-{
-    background-position: 0 108px;
+#personagem.andando{
+    animation:andando 500ms steps(3) infinite;
 }
 
-#personagem.andando
-{
-    animation: andando 500ms steps(3) infinite;
+@keyframes andando{
+    0% { background-position-x: 0 }
+    100% {background-position-x:-140px; }
 }
 
-@keyframes andando
-{
-    0%
-    {
-        background-position-x: 0;
-    }
-    100%
-    {
-        background-position-x: -140px;
-    }
+#moeda{
+    width:20px;
+    height:20px;
+    background-image:url('imagens/moeda.png');
+    background-size:100%;
+    position:absolute;
 }
 
-#moeda
+#placar{
+    width:640px;
+    height:50px;
+    margin:0 auto;
+    background-color: darkgreen;
+    color:white;
+    font-family: 'VT323',sans-serif;
+    font-stretch: expanded;
+    font-size:50px;
+    font-weight: bold;
+    margin-bottom:-20px;
+    margin-top:20px;
+    border: 3px solid #000;
+    border-bottom: 0;
+}
+
+.tree1
 {
-    width: 20px;
-    height: 20px;
-    background-image: url('imagens/moeda.png');
-    background-size: 100%;
     position: absolute;
-    border: 1px solid blue;
+    z-index: 2;
+    height: 96px;
+    width: 96px;
+    margin-top: 153px;
+    margin-left: 221px;
+    background-image: url(imagens/tree.gif);
 }
 
-#placar
+.tree2
 {
-    width: 640px;
-    height: 70px;
-    margin-top: 10px;
-    background-color: rgb(11, 75, 30);
-    margin: 0 auto;
-    border: 3px solid rgb(121, 61, 5);
-    color: #fff;
-    font-size: 30px;
-    font-family: 'calibri',sans-serif;
-    padding-bottom: 3px;
+    position: absolute;
+    z-index: 995;
+    height: 96px;
+    width: 96px;
+    margin-top: 79px;
+    margin-left: 151px;
+    background-image: url(images/tree.gif);
 }
