@@ -6,6 +6,8 @@ let tempo = document.querySelector("#tempo");
 
 let jogoinicializado = false;
 
+//variaveis
+
 moeda.style.display = "none";
 
 let topo = 0;
